@@ -28,6 +28,11 @@ const detectFaces = async () => {
             pred.bottomRight[1] - pred.topLeft[1]
         );
         ctx.stroke();
+        
+        ctx.fillStyle="red";
+        pred.landmarks.forEach((landmark)=>{
+            ctx.fillRect(landmark[0],landmark[1],5,5);
+        });
     });
 };
 
